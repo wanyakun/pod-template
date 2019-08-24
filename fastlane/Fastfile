@@ -1,0 +1,51 @@
+import_from_git(
+  url: 'https://github.com/wanyakun/fastlane.git',
+  branch: 'master'
+)
+
+default_platform :ios
+
+platform :ios do
+
+  desc 'code analyze'
+  lane :analyze do
+    yk_analyze(workspace: 'Example/${POD_NAME}.xcworkspace', scheme: '${POD_NAME}')
+  end
+
+	desc 'build dynamic framework'
+	lane :build_fmk do
+		yk_build_framework(project: '${POD_NAME}')
+	end
+
+  desc 'build static library'
+  lane :build_lib do
+    yk_build_static_lib(project: '${POD_NAME}')
+  end
+
+	desc 'publish source'
+	lane :publish_src do |options|
+		version = options[:version]
+		yk_component_release_src(
+			version:version,
+			project:'${POD_NAME}'
+		)
+	end
+
+	desc 'publish static library'
+	lane :publish_lib do |options|
+		version = options[:version]
+		yk_component_release_static_lib(
+			version:version,
+			project:'${POD_NAME}'
+		)
+	end
+
+	desc 'publish fmk'
+	lane :publish_fmk do |options|
+		version = options[:version]
+		yk_component_release_fmk(
+			version:version,
+			project:'${POD_NAME}'
+		)
+	end
+end
