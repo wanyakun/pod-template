@@ -68,3 +68,10 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+
+#infer
+infer-out/
+
+# Bundler
+.bundle
+Example/Pods/
