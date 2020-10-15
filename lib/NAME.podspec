@@ -26,8 +26,8 @@ Pod::Spec.new do |s|
   s.vendored_libraries = 'lib/*.a'
   s.preserve_paths = 'lib/*.a', 'lib/**/*.h', 'lib/**/*.modulemap'
 
-  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
-
+  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
 
   # s.resource_bundles = {
   #   '${POD_NAME}' => ['${POD_NAME}/Assets/*.png']
