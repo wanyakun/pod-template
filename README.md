@@ -20,7 +20,7 @@ There are two reasons for wanting to work on this template, making your own or i
 使用私有模板创建项目命令需要添加--template-url=URL, 使用此模板命令如下
 
 ```shell
-pod lib create --template-url=https://github.com/wanyakun/pod-template.git MyLibrary
+pod lib create --template-url=git@github.com:wanyakun/pod-template.git MyLibrary
 ```
 
 The command `pod lib create` aims to be ran along with this guide: http://guides.cocoapods.org/making/using-pod-lib-create.html so any changes of flow should be updated there also.

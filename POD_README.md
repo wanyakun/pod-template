@@ -11,16 +11,16 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
-在正式使用之前，请在podfile中添加私有Specs的地址：https://github.com/wanyakun/Specs.git
+在正式使用之前，请在podfile中添加私有Specs的地址：git@github.com:wanyakun/Specs.git
 
 ```ruby
-source 'https://github.com/wanyakun/Specs.git'
+source 'git@github.com:wanyakun/Specs.git'
 ```
 
-如果有使用公开第三方类库，也不要忘记添加默认的Specs地址：https://github.com/CocoaPods/Specs.git
+如果有使用公开第三方类库，也不要忘记添加默认的Specs地址：git@github.com:CocoaPods/Specs.git
 
 ```ruby
-source 'https://github.com/CocoaPods/Specs.git'
+source 'git@github.com:CocoaPods/Specs.git'
 ```
 
 ## Installation
