@@ -21,7 +21,8 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '10.0'
   s.requires_arc          = true
-
+  s.static_framework = true
+  
   s.vendored_frameworks = 'fmk/${POD_NAME}.framework'
 
   s.preserve_paths = 'fmk/${POD_NAME}.framework'
